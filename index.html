@@ -1179,8 +1179,9 @@
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(79,142,247,${0.6 * (1 - dist / MAX_DIST)})`;
-          ctx.lineWidth = 1.5;
+          const isMobile = canvas.width < 768;
+          ctx.strokeStyle = `rgba(79,142,247,${(isMobile ? 0.2 : 0.6) * (1 - dist / MAX_DIST)})`;
+          ctx.lineWidth = isMobile ? 0.6 : 1.5;
           ctx.stroke();
         }
       }
