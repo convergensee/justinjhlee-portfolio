@@ -370,6 +370,14 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+      align-items: stretch;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .project-desc {
+      flex: 1;
     }
     .project-card {
       background: var(--surface);
@@ -499,7 +507,6 @@
       section { padding: 72px 1.25rem; }
       .highlights-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
-      .project-card.featured { grid-column: span 1; }
       .skills-grid { grid-template-columns: 1fr; }
       .hero-stats { gap: 2rem; }
       .contact-links { flex-direction: column; align-items: center; }
@@ -870,8 +877,11 @@
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
 
-<section id="skills">
+<!-- SKILLS -->
   <div class="section-inner">
     <div class="section-label">Skills</div>
     <h2>Core Competencies</h2>
